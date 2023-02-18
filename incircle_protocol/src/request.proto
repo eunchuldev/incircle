@@ -1,0 +1,11 @@
+syntax = "proto3";
+package incircle.request;
+
+message Move {
+  float direction = 1;
+}
+message Request {
+  oneof event {
+    Move move = 1;
+  }
+}

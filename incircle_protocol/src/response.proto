@@ -1,0 +1,17 @@
+syntax = "proto3";
+package incircle.response;
+
+message ObserveMoving {
+  string code = 1;
+  float x = 2;
+  float y = 3;
+}
+message ObserveSpeaking {
+}
+
+message Response {
+  oneof event {
+    ObserveMoving observe_moving = 1;
+    ObserveSpeaking observe_speaking = 2;
+  }
+}
